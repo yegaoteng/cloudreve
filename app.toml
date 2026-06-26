@@ -1,0 +1,17 @@
+[app]
+name = "cloudreve"
+version = "0.1.0"
+
+[[runner.package]]
+name = "cloudreve/cloudreve"
+version = "latest"
+
+[runner.config]
+entrypoint = ["/cloudreve/cloudreve"]
+
+[ports]
+http = 5212
+
+[volumes.data]
+mount = "/cloudreve/data"
+size = "1Gi"
